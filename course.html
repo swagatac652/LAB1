@@ -63,11 +63,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             });
         });
    
-	    gtag("event", "view_item_list", {
-  item_list_id: "related_products",
-  item_list_name: "Related products",
-  items: [
-    {
+	    dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+dataLayer.push({
+  event: "view_item_list",
+  ecommerce: {
+    item_list_id: "related_products",
+    item_list_name: "Related products",
+    items: [
+     {
       item_id: "SKU_12345",
       item_name: "Stan and Friends Tee",
       affiliation: "Google Merchandise Store",
@@ -86,23 +89,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
       price: 9.99,
       quantity: 1
-    }
-  ]
-});
-	    
-	    dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
-dataLayer.push({
-  event: "add_to_cart",
-  ecommerce: {
-    items: [
+    },
     {
-      item_id: "SKU_12345",
-      item_name: "Python",
+      item_id: "SKU_12346",
+      item_name: "Google Grey Women's Tee",
       affiliation: "Google Merchandise Store",
       coupon: "SUMMER_FUN",
-      currency: "INR",
-      discount: 200,
-      index: 0,
+      discount: 3.33,
+      index: 1,
       item_brand: "Google",
       item_category: "Apparel",
       item_category2: "Adult",
@@ -111,41 +105,13 @@ dataLayer.push({
       item_category5: "Short sleeve",
       item_list_id: "related_products",
       item_list_name: "Related Products",
-      item_variant: "green",
+      item_variant: "gray",
       location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
-      price: 2000,
+      price: 20.99,
+      promotion_id: "P_12345",
+      promotion_name: "Summer Sale",
       quantity: 1
-    }
-    ]
-  }
-});
-	  
-dataLayer.push({
-  event: "add_to_cart",
-  ecommerce1: {
-    items: [
-    {
-      item_id: "SKU_1234",
-      item_name: "AI",
-      affiliation: "Google Merchandise Store",
-      coupon: "SUMMER_FUN",
-      currency: "INR",
-      discount: 200,
-      index: 0,
-      item_brand: "Google",
-      item_category: "Apparel",
-      item_category2: "Adult",
-      item_category3: "Shirts",
-      item_category4: "Crew",
-      item_category5: "Short sleeve",
-      item_list_id: "related_products",
-      item_list_name: "Related Products",
-      item_variant: "green",
-      location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
-      price: 1000,
-      quantity: 1
-    }
-    ]
+    }]
   }
 });
 	</script>
