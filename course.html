@@ -111,17 +111,16 @@ dataLayer.push({
     }]
   }
 });
-	    dataLayer.push({ ecommerce: null });
-	dataLayer.push({
+	    dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+dataLayer.push({
   event: "add_to_cart",
   ecommerce: {
     currency: "USD",
     value: 7.77,
-    
     items: [
     {
-	item_id: "ABC_12345",
-      item_name: "Stan",
+      item_id: "SKU_12345",
+      item_name: "Stan and Friends Tee",
       affiliation: "Google Merchandise Store",
       coupon: "SUMMER_FUN",
       discount: 2.22,
@@ -138,15 +137,15 @@ dataLayer.push({
       location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
       price: 9.99,
       quantity: 1
-    },
+    },
 	    {
-      item_id: "SKU_12345",
-      item_name: "Stan and Friends Tee",
+		  item_id: "ABC_12345",
+      		  item_name: "Friends Tee",
       affiliation: "Google Merchandise Store",
       coupon: "SUMMER_FUN",
       discount: 2.22,
       index: 1,
-      item_brand: "Google",
+      item_brand: "Google Merchent",
       item_category: "Apparel",
       item_category2: "Adult",
       item_category3: "Shirts",
@@ -158,9 +157,9 @@ dataLayer.push({
       location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
       price: 9.99,
       quantity: 1
-    }
-    ]
-  }
+	    }
+    ]
+  }
 });
 	    
 	    dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
